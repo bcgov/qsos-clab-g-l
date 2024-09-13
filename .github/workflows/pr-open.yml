@@ -31,11 +31,11 @@ jobs:
     needs: [builds]
     uses: bcgov/quickstart-openshift-helpers/.github/workflows/.deployer.yml@v0.7.0
     secrets:
-      oc_namespace: ${{ var.OC_NAMESPACE }}
+      oc_namespace: ${{ vars.OC_NAMESPACE }}
       oc_token: ${{ secrets.OC_TOKEN }}
     with:
       triggers: ('backend/' 'frontend/' 'migrations/')
-      oc_server: ${{ var.OC_SERVER }}
+      oc_server: ${{ vars.OC_SERVER }}
       params:
         --set global.secrets.persist=false
 
