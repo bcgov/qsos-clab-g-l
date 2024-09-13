@@ -40,8 +40,8 @@ jobs:
     secrets:
       oc_namespace: ${{ vars.OC_NAMESPACE }}
       oc_token: ${{ secrets.OC_TOKEN }}
-      oc_server: ${{ vars.OC_SERVER }}
     with:
+      oc_server: ${{ vars.OC_SERVER }}
       environment: test
 
   deploy-prod:
@@ -51,8 +51,8 @@ jobs:
     secrets:
       oc_namespace: ${{ vars.OC_NAMESPACE }}
       oc_token: ${{ secrets.OC_TOKEN }}
-      oc_server: ${{ vars.OC_SERVER }}
     with:
+      oc_server: ${{ vars.OC_SERVER }}
       environment: prod
       params:
         --set backend.deploymentStrategy=RollingUpdate
