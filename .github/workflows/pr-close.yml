@@ -16,7 +16,7 @@ jobs:
     secrets:
       oc_namespace: ${{ secrets.OC_NAMESPACE }}
       oc_token: ${{ secrets.OC_TOKEN }}
-      oc_server: ${{ vars.OC_SERVER }}
     with:
+      oc_server: ${{ vars.OC_SERVER }}
       cleanup: helm
       packages: backend frontend migrations
