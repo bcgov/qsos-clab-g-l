@@ -40,6 +40,7 @@ jobs:
     secrets:
       oc_namespace: ${{ vars.OC_NAMESPACE }}
       oc_token: ${{ secrets.OC_TOKEN }}
+      oc_server: ${{ vars.OC_SERVER }}
     with:
       environment: test
 
@@ -50,6 +51,7 @@ jobs:
     secrets:
       oc_namespace: ${{ vars.OC_NAMESPACE }}
       oc_token: ${{ secrets.OC_TOKEN }}
+      oc_server: ${{ vars.OC_SERVER }}
     with:
       environment: prod
       params:
