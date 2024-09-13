@@ -8,7 +8,7 @@ on:
       target:
         description: 'PR number to receive DEMO URL routing'
         required: true
-        type: number      
+        type: number
 
 concurrency:
   group: ${{ github.workflow }}
@@ -20,7 +20,7 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.label.name == 'demo' }}
     env:
       DEST: demo
-      DOMAIN: apps.silver.devops.gov.bc.ca
+      DOMAIN: apps.clab.devops.gov.bc.ca
       REPO: ${{ github.event.repository.name }}
     runs-on: ubuntu-latest
     steps:
